@@ -47,6 +47,7 @@ router.post('/', (req,res) => {
             if (err) return handleError(err);
             res.status(201).send(result);
     });
+		done();
 });
 
 router.put('/:id', (req, res) => {
@@ -61,6 +62,7 @@ router.put('/:id', (req, res) => {
 		.catch(error => {
 		res.status(500).json({ 'Error': error })
 		});
+		done();
 });
 
 router.delete('/:id', (req, res) => {
@@ -75,6 +77,7 @@ router.delete('/:id', (req, res) => {
 		.catch(error => {
 		res.status(500).json({ 'Error': error })
 		});
+		done();
 });
 
 module.exports = router;

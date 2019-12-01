@@ -10,7 +10,8 @@ const UserSchema = new Schema({
         twitter: { type: String, required: false },
         linkedIn: { type: String, required: false }
     },
-		blogs: [{ type: Schema.Types.ObjectId, ref: 'Blog' }]
+		blogs: [{ type: Schema.Types.ObjectId, ref: 'Blog' }],
+		done();
 });
 
 

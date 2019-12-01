@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
       res.status(200).json(users);
     })
 		.catch( err => res.status(500).json({ 'Error': error }));
+		done();
 });
 
 router.get('/:id', (req, res) => {
@@ -20,6 +21,7 @@ router.get('/:id', (req, res) => {
 		: res.status(404).json({ 'Message': `No user with ${id} exists` });
     })
 		.catch( err => res.status(500).json({ 'Error': error }));
+		done();
 });
 
 router.post('/', (req, res) => {
@@ -30,6 +32,7 @@ router.post('/', (req, res) => {
     res.status(201).json(user);
     })
 		.catch( err => res.status(500).json({ 'Error': error }));
+		done();
 });
 
 router.put('/:id', (req, res) => {
@@ -41,6 +44,7 @@ router.put('/:id', (req, res) => {
 		.catch(err => {
 		  res.status(500).json({ 'Error': error })
 		});
+		done();
 });
 
 router.delete('/:id', (req, res) => {
@@ -52,6 +56,7 @@ router.delete('/:id', (req, res) => {
 		.catch(err => {
 			res.status(500).json({ 'Error': error })
 		});
+		done();
 });
 
 module.exports = router;
