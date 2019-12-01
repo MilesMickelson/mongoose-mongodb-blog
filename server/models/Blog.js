@@ -7,7 +7,6 @@ const BlogSchema = new Schema({
 		published: { type: Date, required: true},
 		featured: { type: Boolean, required: true},
 		author: { type: Schema.Types.ObjectId, ref: 'User' },
-		done();
 });
 
 module.exports = mongoose.model('Blog', BlogSchema);

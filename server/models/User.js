@@ -11,7 +11,6 @@ const UserSchema = new Schema({
         linkedIn: { type: String, required: false }
     },
 		blogs: [{ type: Schema.Types.ObjectId, ref: 'Blog' }],
-		done();
 });
 
 
