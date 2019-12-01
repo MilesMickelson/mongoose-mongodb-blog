@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
     .then(blogs => {
       res.status(200).json(blogs);
     });
+		done();
 });
 
 router.get('/featured', (req, res) => {
@@ -18,6 +19,7 @@ router.get('/featured', (req, res) => {
 		: res.status(404).json('No featured blogs exist');
     })
 		.catch( error => res.status(500).json({ 'Error': error }));
+		done();
 });
 
 router.get('/:id', (req, res) => {
@@ -29,6 +31,7 @@ router.get('/:id', (req, res) => {
 		: res.status(404).json({ 'Message': `No blog with ${id} exists` });
     })
 		.catch( error => res.status(500).json({ 'Error': error }));
+		done();
 });
 
 router.post('/', (req,res) => {
