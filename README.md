@@ -4,6 +4,6 @@
 
 Object data modeling project with Mongoose/MongoDB creates a blog and user model to query on the backend
 
-## Please feel free to review the code in this repository as there is no front end to feature.
+## Please feel free to review the code in this repository as there is no front end feature to visualize.
 
 * **Thank you**, ***-Miles Mickelson***
